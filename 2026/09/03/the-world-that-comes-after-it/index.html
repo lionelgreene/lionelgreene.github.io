@@ -1,137 +1,326 @@
-<style>
-  body {
-    margin: 0;
-    background: #ffffff;
-    color: #111111;
-    font-family: "Courier New", Courier, monospace;
-    font-size: 13.5px;
-    line-height: 1.32;
-  }
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  main {
-    max-width: 760px;
-    margin: 0 auto;
-    padding: 78px 52px 68px 52px;
-  }
+  <title>The World That Comes After It — Lionel Greene</title>
+  <meta name="description" content="The World That Comes After It, by Lionel Greene. September 3, 2026.">
 
-  .document-head {
-    margin-bottom: 30px;
-  }
-
-  h1 {
-    margin: 0;
-    font-family: "Times New Roman", Times, serif;
-    font-size: 18px;
-    line-height: 1.2;
-    font-weight: bold;
-    color: #111111;
-    text-shadow:
-      0.18px 0 #111111,
-      -0.10px 0 #111111;
-  }
-
-  hr {
-    border: 0;
-    border-top: 1px solid #9f9f9f;
-    margin: 28px 0 0 0;
-  }
-
-  p {
-    margin: 0 0 10px 0;
-    text-align: left;
-    text-shadow:
-      0.22px 0 rgba(0,0,0,0.90),
-      -0.14px 0 rgba(0,0,0,0.42),
-      0 0.18px rgba(0,0,0,0.28);
-  }
-
-  .sequence {
-    margin: 0 0 10px 0;
-    padding-left: 3em;
-  }
-
-  .sequence p {
-    margin: 0 0 1px 0;
-  }
-
-  .bullet {
-    margin: 0 0 7px 0;
-    padding-left: 3em;
-    text-indent: -2em;
-  }
-
-  .signature {
-    margin-top: 30px;
-  }
-
-  .signature p {
-    margin: 0 0 1px 0;
-  }
-
-  .sources {
-    margin-top: 32px;
-    padding-top: 12px;
-    border-top: 1px solid #cfcfcf;
-    font-size: 11.5px;
-    line-height: 1.35;
-  }
-
-  .sources h2 {
-    margin: 0 0 10px 0;
-    font-size: 11.5px;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 0.04em;
-  }
-
-  .sources p {
-    margin: 0 0 6px 0;
-    text-shadow:
-      0.14px 0 rgba(0,0,0,0.65),
-      -0.08px 0 rgba(0,0,0,0.28);
-  }
-
-  .archive {
-    margin-top: 24px;
-    font-size: 11.5px;
-    text-shadow: none;
-  }
-
-  a {
-    color: #0000EE;
-    text-decoration: underline;
-  }
-
-  @media (max-width: 600px) {
+  <style>
     body {
-      font-size: 15px;
-      line-height: 1.38;
+      margin: 0;
+      background: #ffffff;
+      color: #111111;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 13.5px;
+      line-height: 1.32;
     }
 
     main {
-      padding: 46px 20px 44px 20px;
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 78px 52px 68px 52px;
+    }
+
+    .document-head {
+      margin-bottom: 30px;
     }
 
     h1 {
-      font-size: 17px;
+      margin: 0;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 18px;
+      line-height: 1.2;
+      font-weight: bold;
+      color: #111111;
+      text-shadow:
+        0.18px 0 #111111,
+        -0.10px 0 #111111;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #9f9f9f;
+      margin: 28px 0 0 0;
+    }
+
+    p {
+      margin: 0 0 10px 0;
+      text-align: left;
+      text-shadow:
+        0.22px 0 rgba(0,0,0,0.90),
+        -0.14px 0 rgba(0,0,0,0.42),
+        0 0.18px rgba(0,0,0,0.28);
     }
 
     .sequence {
-      padding-left: 2em;
+      margin: 0 0 10px 0;
+      padding-left: 3em;
+    }
+
+    .sequence p {
+      margin: 0 0 1px 0;
     }
 
     .bullet {
-      padding-left: 2em;
-      text-indent: -1.5em;
+      margin: 0 0 7px 0;
+      padding-left: 3em;
+      text-indent: -2em;
     }
 
-    .sources,
-    .archive {
-      font-size: 12px;
+    .signature {
+      margin-top: 30px;
+    }
+
+    .signature p {
+      margin: 0 0 1px 0;
+    }
+
+    .sources {
+      margin-top: 32px;
+      padding-top: 12px;
+      border-top: 1px solid #cfcfcf;
+      font-size: 11.5px;
+      line-height: 1.35;
     }
 
     .sources h2 {
-      font-size: 12px;
+      margin: 0 0 10px 0;
+      font-size: 11.5px;
+      font-weight: normal;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
     }
-  }
-</style>
+
+    .sources p {
+      margin: 0 0 6px 0;
+      text-shadow:
+        0.14px 0 rgba(0,0,0,0.65),
+        -0.08px 0 rgba(0,0,0,0.28);
+    }
+
+    .archive {
+      margin-top: 24px;
+      font-size: 11.5px;
+      text-shadow: none;
+    }
+
+    a {
+      color: #0000EE;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 15px;
+        line-height: 1.38;
+      }
+
+      main {
+        padding: 46px 20px 44px 20px;
+      }
+
+      h1 {
+        font-size: 17px;
+      }
+
+      .sequence {
+        padding-left: 2em;
+      }
+
+      .bullet {
+        padding-left: 2em;
+        text-indent: -1.5em;
+      }
+
+      .sources,
+      .archive {
+        font-size: 12px;
+      }
+
+      .sources h2 {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+
+    <div class="document-head">
+      <h1>The World That Comes After It</h1>
+      <hr>
+    </div>
+
+    <p>I feel like I can see the future.</p>
+
+    <p>Not perfectly. Not the companies that win, the models we use, or what we’ll call any of this.</p>
+
+    <p>But I think I can see the direction.</p>
+
+    <p>For most of the digital era, we have adapted ourselves to technology.</p>
+
+    <div class="sequence">
+      <p>We learned the interfaces.</p>
+      <p>Opened the apps.</p>
+      <p>Navigated the menus.</p>
+      <p>Searched for the information.</p>
+      <p>Clicked the buttons.</p>
+    </div>
+
+    <p>I remember hearing the idea of ambient technology almost a decade ago — technology that gradually disappears into the environment around us.</p>
+
+    <p>I think AI may finally make that idea real.</p>
+
+    <p>McKinsey recently discussed part of this transition as moving from “clicks to conversations.”</p>
+
+    <p>I think it goes further than that.</p>
+
+    <p>Clicks → conversations → ambient intelligence.</p>
+
+    <p>Instead of learning how to operate technology, we increasingly just express intent.</p>
+
+    <div class="sequence">
+      <p>We speak.</p>
+      <p>We ask.</p>
+      <p>We delegate.</p>
+      <p>Eventually, perhaps, we barely notice the technology at all.</p>
+    </div>
+
+    <p>It understands the context, coordinates the systems underneath it, and acts.</p>
+
+    <p>That is the puck I’m trying to skate toward.</p>
+
+    <p>Because eventually, “AI” itself may become ordinary. Invisible. Just part of how work gets done. Just… tech.</p>
+
+    <p>And that is exactly why now matters.</p>
+
+    <p>Right now, I happen to be watching that technological transition collide with three enormous forces in financial services:</p>
+
+    <p class="bullet">• $124T of wealth is expected to change hands through 2048. (Cerulli Associates)</p>
+
+    <p class="bullet">• 105,887 advisors — 37.4% of the industry — are expected to retire over the next decade, representing 41.4% of industry assets. (Cerulli Associates)</p>
+
+    <p class="bullet">• AI is entering a historic capital cycle: Goldman Sachs estimates $765B of AI CapEx in 2026, rising to $1.6T annually by 2031. (Goldman Sachs)</p>
+
+    <p>Think about what happens when those curves intersect.</p>
+
+    <div class="sequence">
+      <p>Capital is changing hands.</p>
+      <p>The people managing it are changing.</p>
+      <p>And the interface between humans and institutions is changing with them.</p>
+    </div>
+
+    <p>Voice AI. Agents. Ambient computing. Autonomous workflows.</p>
+
+    <p>These may look like separate technology trends today.</p>
+
+    <p>I increasingly think they are pieces of the same transition:</p>
+
+    <p>Technology is moving from something we operate to something that operates around us.</p>
+
+    <p>And financial institutions are an incredible place to watch that transition happen because the constraints are so unforgiving.</p>
+
+    <div class="sequence">
+      <p>Money has to be protected.</p>
+      <p>Customers have to trust.</p>
+      <p>Regulators have to understand.</p>
+      <p>Systems have to work.</p>
+      <p>And someone ultimately has to be accountable.</p>
+    </div>
+
+    <p>So being inside this transition now means getting to watch institutions decide:</p>
+
+    <div class="sequence">
+      <p>What can a machine know?</p>
+      <p>What can it say?</p>
+      <p>What can it do?</p>
+      <p>What should remain human?</p>
+      <p>What happens when the interface disappears but responsibility doesn’t?</p>
+    </div>
+
+    <p>Those questions feel much bigger to me than AI.</p>
+
+    <p>They are questions about how institutions — and eventually humans — operate when intelligence becomes embedded in the environment around us.</p>
+
+    <p>And that is why I don’t think the goal is to become an “AI person.”</p>
+
+    <div class="sequence">
+      <p>Models will change.</p>
+      <p>Interfaces will disappear.</p>
+      <p>Today’s breakthrough will become tomorrow’s infrastructure.</p>
+    </div>
+
+    <p>But the more capable the technology becomes, the more convinced I am that the scarce things become deeply human:</p>
+
+    <div class="sequence">
+      <p>Judgment.</p>
+      <p>Taste.</p>
+      <p>Trust.</p>
+      <p>Courage.</p>
+      <p>Clarity.</p>
+    </div>
+
+    <p>If intelligence becomes abundant, discernment becomes more valuable.</p>
+
+    <p>So I’m trying to skate past the technology itself.</p>
+
+    <p>Toward the world the technology creates.</p>
+
+    <p>To be close enough to this transition that, when AI becomes ordinary, I have already learned:</p>
+
+    <div class="sequence">
+      <p>How institutions change.</p>
+      <p>How capital moves.</p>
+      <p>How humans and machines divide responsibility.</p>
+      <p>How decisions get made.</p>
+      <p>How trust gets built.</p>
+      <p>How people behave when the ground beneath them starts moving.</p>
+    </div>
+
+    <p>Maybe that is the opportunity of this moment.</p>
+
+    <p>Not merely learning the technology.</p>
+
+    <p>Learning the world that comes after it.</p>
+
+    <div class="signature">
+      <p>Lionel Greene</p>
+      <p>September 3, 2026</p>
+    </div>
+
+    <div class="sources">
+      <h2>Sources</h2>
+
+      <p>
+        <a href="https://www.mckinsey.com/capabilities/tech-and-ai/our-insights/approaching-generative-ai-with-a-beginners-mindset">
+          McKinsey — clicks to conversations
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.cerulli.com/press-releases/cerulli-anticipates-124-trillion-in-wealth-will-transfer-through-2048">
+          Cerulli Associates — wealth transfer through 2048
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.cerulli.com/reports/us-advisor-metrics-2024">
+          Cerulli Associates — advisor retirement projections
+        </a>
+      </p>
+
+      <p>
+        <a href="https://www.goldmansachs.com/insights/articles/tracking-trillions-the-assumptions-shaping-scale-of-the-ai-build-out">
+          Goldman Sachs — AI capital expenditure projections
+        </a>
+      </p>
+    </div>
+
+    <p class="archive"><a href="/">Return to archive</a></p>
+
+  </main>
+</body>
+</html>
