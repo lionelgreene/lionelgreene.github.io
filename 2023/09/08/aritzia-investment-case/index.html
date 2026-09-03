@@ -1,16 +1,355 @@
- <p>Lionel Greene</p>
-          <p>September 8, 2023</p>
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-      </div>
+  <title>Aritzia Investment Case — Lionel Greene</title>
+  <meta name="description" content="Aritzia Investment Case, by Lionel Greene. September 8, 2023.">
 
-    </article>
+  <style>
+    html {
+      background: #d7d7d5;
+    }
 
-    <p class="archive-link">
-      <a href="/">Return to archive</a>
-    </p>
+    body {
+      margin: 0;
+      background: #d7d7d5;
+      color: #171717;
+    }
 
-  </div>
+    .viewer {
+      padding: 14px 16px 34px 16px;
+    }
+
+    .page {
+      position: relative;
+      box-sizing: border-box;
+      width: min(900px, calc(100vw - 32px));
+      min-height: 1165px;
+      margin: 0 auto;
+      padding: 86px 86px 76px 86px;
+
+      background:
+        radial-gradient(circle at 13% 11%, rgba(0,0,0,0.12) 0 0.45px, transparent 0.7px),
+        radial-gradient(circle at 78% 17%, rgba(0,0,0,0.08) 0 0.4px, transparent 0.7px),
+        radial-gradient(circle at 34% 39%, rgba(0,0,0,0.07) 0 0.45px, transparent 0.75px),
+        radial-gradient(circle at 91% 61%, rgba(0,0,0,0.09) 0 0.4px, transparent 0.7px),
+        radial-gradient(circle at 19% 82%, rgba(0,0,0,0.07) 0 0.4px, transparent 0.7px),
+        #fdfdfb;
+
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.035),
+        0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(0,0,0,0.012) 0px,
+          rgba(0,0,0,0.012) 1px,
+          transparent 1px,
+          transparent 5px
+        );
+
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.018),
+          transparent 7%,
+          transparent 92%,
+          rgba(0,0,0,0.014)
+        );
+
+      opacity: 0.45;
+    }
+
+    .document {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+
+      font-family: "Times New Roman", Times, serif;
+      font-size: 14px;
+      line-height: 1.38;
+      color: rgba(15,15,15,0.93);
+    }
+
+    .title {
+      margin: 0 0 78px 0;
+      text-align: center;
+
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: bold;
+
+      text-shadow:
+        0.18px 0 rgba(0,0,0,0.65),
+        -0.12px 0 rgba(0,0,0,0.24),
+        0 0.12px rgba(0,0,0,0.18);
+    }
+
+    p {
+      margin: 0 0 14px 0;
+
+      text-shadow:
+        0.18px 0 rgba(0,0,0,0.48),
+        -0.10px 0 rgba(0,0,0,0.20),
+        0 0.12px rgba(0,0,0,0.15);
+    }
+
+    h2 {
+      margin: 30px 0 14px 0;
+      font-size: 14px;
+      line-height: 1.3;
+      font-weight: bold;
+      font-style: italic;
+    }
+
+    .point {
+      margin-bottom: 18px;
+    }
+
+    .point-title {
+      font-weight: bold;
+    }
+
+    ul {
+      margin: 8px 0 18px 22px;
+      padding: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .signature {
+      margin-top: 36px;
+    }
+
+    .signature p {
+      margin: 0 0 2px 0;
+    }
+
+    .archive-link {
+      width: min(900px, calc(100vw - 32px));
+      box-sizing: border-box;
+      margin: 12px auto 0 auto;
+      padding: 0 4px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12px;
+    }
+
+    .archive-link a {
+      color: #222222;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      html,
+      body {
+        background: #ffffff;
+      }
+
+      .viewer {
+        padding: 0;
+      }
+
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 48px 20px 42px 20px;
+        background: #ffffff;
+        box-shadow: none;
+      }
+
+      .page::before {
+        opacity: 0.10;
+      }
+
+      .page::after {
+        display: none;
+      }
+
+      .document {
+        max-width: none;
+        font-size: 16px;
+        line-height: 1.48;
+      }
+
+      .title {
+        margin-bottom: 54px;
+        font-size: 18px;
+      }
+
+      p {
+        margin-bottom: 17px;
+      }
+
+      h2 {
+        font-size: 16px;
+        margin-top: 30px;
+      }
+
+      .archive-link {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px 30px 20px;
+        font-size: 13px;
+      }
+    }
+
+    @media print {
+      html,
+      body {
+        background: #ffffff;
+      }
+
+      .viewer {
+        padding: 0;
+      }
+
+      .page {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0.8in;
+        box-shadow: none;
+      }
+
+      .archive-link {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="viewer">
+
+<article class="page">
+
+<div class="document">
+
+<h1 class="title">Aritzia Investment Case</h1>
+
+<p>Aritzia is an apparel retailer. Their vertically integrated model houses “exclusive brands for every function and individual aesthetic.” (The benefits are described later). Their unique operating model allows them to manage the biggest risk in the industry, fashion risk. Not only does it allow them to mitigate fashion risk, but also generates high returns on both a company wide and unit economic basis.</p>
+
+<p>It deserves to be repeated that among apparel retailers, the largest risk is fashion risk. The preferences and tastes of: consumers, designers and tastemakers are constantly in flux, which creates the perpetual risk of mistakenly extrapolating a short-term fad as a long-term secular trend. Investors tend to be weary of fashion retailers as they contain cyclical risk which adds uncertainty. Shoppers do more shopping during holidays than summer, and more during the back to school season than in spring. The fluctuations and management of inventory can lead to periods of sale or discounted items. This introduces uncertainty in forecasting revenues and operating margins. Consumer preferences indirectly dictate the margin realized upon the sale of an item. If the item is purchased when discounted, margins are compressed.</p>
+
+<p>This is precisely what the market is pricing into Aritzia’s share price. Prior to Q1, Aritzia chose to heavily stock core items after seeing revenue soar by 2.5x since FY2021. However, the current macroenvironment has led to a slowdown in consumer spending. As a result, Aritzia’s sales growth and inventory turnover have regressed considerably. However, Aritzia’s unique model will prevent it from succumbing to the fate of other retailers. In fact, Aritzia’s disciplined capital allocation and rigorous real estate acquisition strategies will allow it to thrive, both in downturns and upswings, as it did in 2020, during the pandemic.</p>
+
+<h2>Business Model</h2>
+
+<p>Aritzia operates a vertically integrated business model which houses “exclusive brands for every function and individual aesthetic”. This is important because it reduces Aritzia’s fashion/trend risk. Isabel Slone, a journalist and culture critic in Toronto describes Aritzia as “an inoffensive version of what is stylish” and claims “Everyone has some pieces of Aritzia in their closet”. Aritzia’s clothes have little to no logos and are typically solid colors or wardrobe staples. Positioned as “Everyday Luxury” their clothes are designed to accentuate fit and quality over patterns and trends. No clothing labels contain the word “Aritzia”. Instead they are tagged with the names of their respective brands.</p>
+
+<p>Babaton is the brand targeted toward the young professional, while TNA sells biker shorts and leggings geared toward active and lifestyle wear. Their SuperWorld brand sells puffer coats for winter, while their Denim Forum brand sells jeans. The collection of brands create a longer and larger lifetime value of each customer, while providing a strong value proposition in the marketplace.</p>
+
+<p>Aritzia CEO Jennifer Wong, has once described the brand as “multiple in-house brands aimed at different demographics, creating ‘an assortment of fashion apparel to appeal to mum, grandma and daughter”. These brands are exclusive to Aritzia and generate 97% of their overall revenue. Each creation of a new brand is the creation of a new opportunity to invest capital at high rates of return, increase the value proposition to customers and overall value of the Aritzia brand.</p>
+
+<p>Fashion brands rarely have this luxury. If denim begins to trend, Lululemon cannot pivot to selling denim and when leggings began to trend, Levi’s had nothing to mitigate this fashion risk away from jeans. Aritzia can shift and scale their focus to and from specific brands to protect against or exploit these fashion trends.</p>
+
+<p>As this network of brands is strengthened (which strengthens productivity metrics like units per transaction, average transaction value and revenue per customer) the stickiness of the consumer increases. Aritzia announces a brief sale period twice per year, which has trained their clients to pay full price for a quality product. This brand loyalty helps mitigate the risk of brands being devalued by “sale shoppers”.</p>
+
+<h2>Management Team</h2>
+
+<p>Aritzia has an all class management team. Every investment wrestles with the dilemma of forecasting into the future. Execution risk affects every. single. business. Which is why it's important to have a management team who can deliver on their projections in full.</p>
+
+<p>Brian Hill, founder (largest shareholder with 18% of shares owned) and former CEO has never closed a single location in 39 years of operation. Since its IPO, Aritzia has grown revenue by 329%, EBITDA by 353%, EPS by 363%, while the share price has only increased by 34%. The main engine of the business has been new store openings. Since 2008, overall boutique count has grown at an 11% CAGR.</p>
+
+<p>Boutique openings significantly increase eCommerce revenue in cities where new stores open (management has seen 50-80% eComm revenue growth and 100% in some locations like Minnesota and Denver). Jennifer Wong, was given the task of building out the Aritzia eCommerce platform when she launched it in 2013, and has grown eCommerce revenues annually by 36% from FY2016 to FY 2020, 88% in FY 2021 during the height of the COVID-19 pandemic, followed by growth of 33% in FY 2022 and 36% in FY 2023.</p>
+
+<p>These store openings have been lucrative as the Aritzia real estate team has the highest level of discipline (in some cases waiting 11 years to maximize investment return for the ideal location in the SouthCenter mall in Calgary), and an impressive capital allocation strategy. These attractive investment opportunities should continue as Aritzia has currently identified 100 additional locations suitable for their boutiques.</p>
+
+<p>The current woes in the commercial real estate industry have allowed Aritzia to acquire properties at much lower rates, which create even more compelling unit economics. Lastly, landlords see Aritzia as a way to increase the value of their shopping centers and malls by leasing their property to Aritzia. Introducing Aritzia as a new age “mall anchor”, driving traffic and reliable revenue, creating a win-win for both parties.</p>
+
+<p>If you’re not familiar with New York City, the value of real estate can change drastically by the standard deviation of one street or one avenue. In Soho, the Aritzia flagship store is located on Broadway and Spring Street (this main intersection hosts other major retailers like Zara, H&M and Bloomingdales). These aspirational boutiques drive sales, brand awareness, client acquisition and eCommerce sales. This is their most profitable and effective marketing tool.</p>
+
+<p>On average, these stores cost $3 million dollars to open and produce $8 million dollars at the end of year one. The payback on new boutiques has continued to accelerate, trending ahead of the targeted 12-18 month period. When a value proposition has been established with your customer, more square footage = more units displayed on the sales floor = higher sales per sq ft = higher unit economics.</p>
+
+<p>Aritzia boasts an impressive sales/sqft of around $1,500/sq ft at an average store size of 8,000 sq ft. This is far above industry average of $325 (according to S&amp;P Global and CoStar), and nearly double the sales/sq ft of their comps.</p>
+
+<p>Within the four walls of these stores lies an ingrained culture of high contact salespeople operating within a high productivity environment. The fitting rooms do not have mirrors, instead a customer exits the fitting rooms to look at their clothing in the mirror within a common space. Here a salesperson can maximize the likelihood of a purchase by suggesting the best option, and even adding on items to increase their UPT and ATV which ultimately increases revenue.</p>
+
+<h2>Investment Case</h2>
+
+<div class="point">
+<p><span class="point-title">Low valuation:</span> Aritzia trades at an all-time low P/E of 15.8x (historical median ex covid year = 57x) and an EV / EBITDA of 7.9x, with the historical average of 14x. Even if the company doesn’t revert to its historical average multiple, the median in our comps analysis is at 9.2x. It’s fair to expect the company to revert to its industry average, as it has proven to be a superior business in the space. This infers that Aritzia is trading at a near 50% discount against its historical average. Again, despite its high quality operation and superior unit economics.</p>
+</div>
+
+<div class="point">
+<p><span class="point-title">Same Store Sales Growth:</span> The Covid 19 Pandemic interrupted 22 consecutive quarters of same store sales growth — a new streak seems to be underway with comparable sales at 28% in FY ‘23.</p>
+</div>
+
+<div class="point">
+<p><span class="point-title">Intelligent allocation of excess capital:</span> Historically high returns on equity (30%) and high teens ROIC. Management buys back its own stock in a disciplined way and only when the share price appears lucrative (doesn’t overpay for its own shares). Between Jan 20th and July 10th, the company reacquired 282,300 shares at $35.36.</p>
+</div>
+
+<div class="point">
+<p><span class="point-title">Clothes are a basic necessity:</span> People will always need clothes to wear as the US apparel market is calculated to amount to $344 Billion. Originally founded as clothing for young women with “discretionary income” who don’t want to sacrifice quality, Aritzia’s “Everyday Luxury” is becoming a necessary niche in the fashion landscape and should continue to grow.</p>
+</div>
+
+<p>Aritzia’s eCommerce investments in their platform, logistics network (expansion of fulfillment center in 2023/2024) and search AI to maximize efficiency (as early as 2018) puts them at the forefront of the “New Retail” Wave, having successfully created an omni-channel retailer.</p>
+
+<h2>Catalysts</h2>
+
+<ul>
+  <li>Management execution on new store openings (1 thus far with 8 set for H2 of this year).</li>
+
+  <li>Short Term cost headwinds subsiding — improving margins.</li>
+
+  <li>Easier comps moving forward coming off of a 2.5x revenue increase over last three years.</li>
+
+  <li>Improved Inventory turnover — Working through inventory with the most recent sale, where sale items were discounted by up to 50%. Management keeps integrity behind “sale periods”. Only going on sale 1-2 times per year. Also keeping high integrity in revenue numbers, as management only reduces the price of items to clear inventory, NOT to temporarily boost revenues or select styles, as many other brands do.</li>
+
+  <li>Natural Seasonality of business will paint a more complete picture as historically, most of the operating profit has been recognized in Q3 and Q4.</li>
+</ul>
+
+<h2>Valuation</h2>
+
+<p>The discount priced into Aritzia’s shares seem to be an overreaction to poor Q1 earnings numbers. The macroenvironment is historically uncertain and extremely challenging. However, Aritzia should continue to grow the business and capture market share with their disciplined capital allocation and profitable growth plans.</p>
+
+<p>Management’s goal of reaching $3.5-$3.8B in revenues by the end of FY 27 seems achievable, even after adjusting for the current year’s low guidance. Growing revenue at a near 17% CAGR for 12 years, Aritzia’s revenue growth should revert back to its historical average as they continue to open new stores each year (particularly because their US stores historically generate more revenue than their Canadian counterparts).</p>
+
+<p>Management has also confirmed that their long term revenue goals (and goal of 19% EBITDA margin), don’t appear to be derailed by this most recent quarter. This appears to be an asymmetric risk/reward opportunity, where downside is limited and the potential upside is 2-3x within the next 3-4 years. Those who choose to own Aritzia longer than that will likely see benefits of even longer term compounding.</p>
+
+<p>“Heads I win, Tails I don’t lose much” - Mohnish Pabrai</p>
+
+<p>Model is attached/available upon request.</p>
+
+<div class="signature">
+  <p>Lionel Greene</p>
+  <p>September 8, 2023</p>
+</div>
+
+</div>
+
+</article>
+
+<p class="archive-link">
+  <a href="/">Return to archive</a>
+</p>
+
+</div>
 
 </body>
 </html>
