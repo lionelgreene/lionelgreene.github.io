@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tariffs &amp; Asset Managers: Initial Observations &amp; Questions — Lionel Greene</title>
+
+  <meta name="description" content="Tariffs & Asset Managers: Initial Observations & Questions by Lionel Greene Jr. April 4th, 2025.">
+
+  <style>
+    html {
+      background: #d7d7d5;
+    }
+
+    body {
+      margin: 0;
+      background: #d7d7d5;
+      color: #171717;
+    }
+
+    .viewer {
+      padding: 14px 16px 34px 16px;
+    }
+
+    .page {
+      position: relative;
+      box-sizing: border-box;
+      width: min(900px, calc(100vw - 32px));
+      min-height: 1165px;
+      margin: 0 auto;
+      padding: 86px 86px 76px 86px;
+
+      background:
+        radial-gradient(circle at 13% 11%, rgba(0,0,0,0.12) 0 0.45px, transparent 0.7px),
+        radial-gradient(circle at 78% 17%, rgba(0,0,0,0.08) 0 0.4px, transparent 0.7px),
+        radial-gradient(circle at 34% 39%, rgba(0,0,0,0.07) 0 0.45px, transparent 0.75px),
+        radial-gradient(circle at 91% 61%, rgba(0,0,0,0.09) 0 0.4px, transparent 0.7px),
+        radial-gradient(circle at 19% 82%, rgba(0,0,0,0.07) 0 0.4px, transparent 0.7px),
+        #fdfdfb;
+
+      box-shadow:
+        0 0 0 1px rgba(0,0,0,0.035),
+        0 1px 3px rgba(0,0,0,0.08);
+    }
+
+    .page::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        repeating-linear-gradient(
+          0deg,
+          rgba(0,0,0,0.012) 0px,
+          rgba(0,0,0,0.012) 1px,
+          transparent 1px,
+          transparent 5px
+        );
+      opacity: 0.22;
+      mix-blend-mode: multiply;
+    }
+
+    .page::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(
+          90deg,
+          rgba(0,0,0,0.018),
+          transparent 7%,
+          transparent 92%,
+          rgba(0,0,0,0.014)
+        );
+      opacity: 0.45;
+    }
+
+    .document {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+      margin: 0 auto;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 13.25px;
+      line-height: 1.34;
+      color: rgba(15,15,15,0.93);
+    }
+
+    .version {
+      margin: 0 0 18px 0;
+      font-size: 11.5px;
+      letter-spacing: 0.03em;
+    }
+
+    .title {
+      margin: 0 0 8px 0;
+      text-align: center;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 17px;
+      line-height: 1.2;
+      font-weight: bold;
+      color: rgba(10,10,10,0.92);
+      text-shadow:
+        0.18px 0 rgba(0,0,0,0.65),
+        -0.12px 0 rgba(0,0,0,0.24),
+        0 0.12px rgba(0,0,0,0.18);
+    }
+
+    .byline,
+    .date {
+      margin: 0;
+      text-align: center;
+    }
+
+    .date {
+      margin-bottom: 38px;
+    }
+
+    .rule {
+      border: 0;
+      border-top: 1px solid rgba(0,0,0,0.22);
+      margin: 0 0 34px 0;
+    }
+
+    h2 {
+      margin: 30px 0 12px 0;
+      font-family: "Courier New", Courier, monospace;
+      font-size: 13.25px;
+      line-height: 1.34;
+      font-weight: bold;
+    }
+
+    p {
+      margin: 0 0 12px 0;
+      text-shadow:
+        0.20px 0 rgba(0,0,0,0.58),
+        -0.12px 0 rgba(0,0,0,0.26),
+        0 0.16px rgba(0,0,0,0.18);
+    }
+
+    ul {
+      margin: 0 0 18px 0;
+      padding-left: 24px;
+    }
+
+    li {
+      margin: 0 0 9px 0;
+    }
+
+    .numbered {
+      margin-left: 0;
+    }
+
+    .figure {
+      margin: 28px auto 8px auto;
+      text-align: center;
+    }
+
+    .figure img {
+      display: block;
+      max-width: 360px;
+      width: 72%;
+      height: auto;
+      margin: 0 auto;
+      border: 1px solid rgba(0,0,0,0.08);
+    }
+
+    .figure figcaption {
+      margin-top: 8px;
+      font-size: 11.25px;
+      line-height: 1.35;
+    }
+
+    .sources {
+      margin-top: 42px;
+      padding-top: 13px;
+      border-top: 1px solid rgba(0,0,0,0.22);
+      font-size: 11.25px;
+      line-height: 1.38;
+    }
+
+    .sources h2 {
+      margin: 0 0 10px 0;
+      font-size: 11.25px;
+      line-height: 1.3;
+      font-weight: normal;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+
+    .sources p {
+      margin: 0 0 7px 0;
+      overflow-wrap: anywhere;
+      text-shadow:
+        0.12px 0 rgba(0,0,0,0.42),
+        -0.06px 0 rgba(0,0,0,0.18);
+    }
+
+    a {
+      color: #0000cc;
+      text-decoration: underline;
+    }
+
+    .signature {
+      margin-top: 34px;
+    }
+
+    .signature p {
+      margin: 0 0 2px 0;
+    }
+
+    .archive-link {
+      width: min(900px, calc(100vw - 32px));
+      box-sizing: border-box;
+      margin: 12px auto 0 auto;
+      padding: 0 4px;
+      font-family: "Times New Roman", Times, serif;
+      font-size: 12px;
+    }
+
+    .archive-link a {
+      color: #222222;
+      text-decoration: underline;
+    }
+
+    @media (max-width: 600px) {
+      html, body {
+        background: #ffffff;
+      }
+
+      .viewer {
+        padding: 0;
+      }
+
+      .page {
+        width: 100%;
+        min-height: auto;
+        margin: 0;
+        padding: 48px 20px 42px 20px;
+        background:
+          radial-gradient(circle at 13% 11%, rgba(0,0,0,0.07) 0 0.35px, transparent 0.6px),
+          radial-gradient(circle at 78% 17%, rgba(0,0,0,0.05) 0 0.35px, transparent 0.6px),
+          #ffffff;
+        box-shadow: none;
+      }
+
+      .page::before {
+        opacity: 0.10;
+      }
+
+      .page::after {
+        display: none;
+      }
+
+      .document {
+        max-width: none;
+        font-size: 15px;
+        line-height: 1.43;
+      }
+
+      .title {
+        font-size: 17px;
+      }
+
+      p {
+        margin-bottom: 15px;
+        text-shadow:
+          0.14px 0 rgba(0,0,0,0.40),
+          -0.07px 0 rgba(0,0,0,0.16);
+      }
+
+      h2 {
+        font-size: 15px;
+      }
+
+      .figure img {
+        width: 88%;
+        max-width: 360px;
+      }
+
+      .sources {
+        margin-top: 36px;
+        font-size: 12px;
+      }
+
+      .sources h2 {
+        font-size: 12px;
+      }
+
+      .archive-link {
+        width: 100%;
+        margin: 0;
+        padding: 0 20px 30px 20px;
+        font-size: 13px;
+      }
+    }
+
+    @media print {
+      html, body {
+        background: #ffffff;
+      }
+
+      .viewer {
+        padding: 0;
+      }
+
+      .page {
+        width: auto;
+        min-height: 0;
+        margin: 0;
+        padding: 0.8in 0.8in;
+        box-shadow: none;
+      }
+
+      .archive-link {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="viewer">
+    <article class="page">
+      <div class="document">
+
+        <p class="version">VERSION 2</p>
+
+        <h1 class="title">Tariffs &amp; Asset Managers: Initial Observations &amp; Questions</h1>
+        <p class="byline">By Lionel Greene Jr.</p>
+        <p class="date">April 4th, 2025</p>
+
+        <hr class="rule">
+
+        <h2>Summary</h2>
+
+        <p>
+          On April 2nd, President Donald Trump imposed widespread tariffs on imports from roughly 60 countries.
+          Included is a widespread tariff of 10% with some countries receiving a higher reciprocal tariff.
+          Tariffs have the potentiality to:
+        </p>
+
+        <ul>
+          <li>Hurt profits by increasing costs and compressing margins (absorb costs).</li>
+          <li>Reduce sales by testing customer’s price sensitivity if costs are passed to consumers.</li>
+          <li>Could increase the strength of the USD. In a recent note, Goldman Sachs predicrts the dollar could rally by 5% (Bloomberg). Higher tariffs may slow monetary easing by fanning inflation. In our current climate, it would be unlikely for the FED to lower rates, as they remain focused on containing inflation especially with tariffs being applied to goods.</li>
+        </ul>
+
+        <figure class="figure">
+          <img src="reciprocal-tariffs.png" alt="Reciprocal tariffs table">
+          <figcaption>Via: Thomson Reuters</figcaption>
+        </figure>
+
+        <h2>1. Industry Overview</h2>
+
+        <p>
+          The tariff-related media has been dominated by headlines with a tech, semiconductors and consumer retail focus. However, the second-order effects on asset managers and business development companies (BDCs)—particularly those with exposure to credit, small-to-mid market lending, or international portfolio holdings—have received comparatively less attention. This note explores early signals and areas worth watching.
+        </p>
+
+        <p>
+          Asset managers and BDC’s play a pivotal role in providing capital to mid-market companies. Tariff-induced disruptions in these companies can influence financial performance &amp; strategic decisions of asset managers and BDC’s
+        </p>
+
+        <p>A few potential impacts are:</p>
+
+        <p class="numbered">
+          1. Capital Inflows - decreased revenue for mid-market companies as their AUM drops and they collect less revenues as a percentage of assets under management. Could this possibly slow capital deployment? According to Rahman and Rahman’s, study on trade openness and its effects on profitability, Trade openness is expected to raise the financial intermediation of banks by growing the demand for loans to establish new production facilities andmeet higher working capital needed to produce and sell in international markets. The general perception is that higher trade openness leads to lesser financial intermediation cost and better performance in the banking company. In this study, they ultimately concluded that higher trade openness creates a more diversified investment opportunity for banks which as a result, a strong chance of attaining higher net operating income, and in turn, higher profitability.
+        </p>
+
+        <p class="numbered">
+          2. Portfolio Valuations - Earnings pressures on portfolio companies due to tariffs can lead toward downward adjustments in valuations, affecting the NAV of BDC’s and the performance metrics of asset managers.
+        </p>
+
+        <p class="numbered">
+          3. Investor Sentiment - Investor sentiment seems to be amplified by the unpredictability of the government's conviction in new policies. Uncertainty surrounding tariffs can heighten market volatility, influencing investor confidence &amp; potentially leading to capital outflows from funds managed by these entities. The US Economic Policy Uncertainty Index has jumped to a top percentile reading relative to the last 40 years (Goldman Sachs).
+        </p>
+
+        <h2>Sector Outlook:</h2>
+
+        <p>
+          While tariffs may not pose an existential threat to BDCs or Asset Managers, they do add in a layer of macroeconomic risk that could pressure valuations and increase volatility. Firms with international exposure, leveraged companies, or focused investing strategies may face the greatest challenges.
+        </p>
+
+        <p>
+          Name like Apollo are well-diversified and may be better positioned than focused funds, although they could still face headwinds. Apollo’s credit business has $616.4 billion of AUM spread across four of their main investment pillars: direct origination, asset-backed finance, opportunistic credit and multi-credit. Next to their credit arm, the AUM of their equity strategy totals to $134.7 billion encompassed by Corporate Private Equityt, hybrid value, AAA, Real estate equity and infrastructure equity. Another highlight is the diversification in the profile of their investors. Again, the fundraising strategy of the asset management business, consists of credit and equity strategies. Apollo raises private capital from “prominent institutional investors, including public and private pension funds, sovereign wealth funds, endowments and foundations, private wealth platforms, family offices, high net worth individuals, and other institutional investors, and from public market investors” (Apollo Global, 2024 10-K). This would ensure diversification of funds while ensuring the quality of their clients would create an additional layer of portfolio stability, that would allow their capital to be deployed rather than pulled by investors who may have lower credit quality or feel constricted in their funding abilities.
+        </p>
+
+        <div class="sources">
+          <h2>Sources:</h2>
+
+          <p><a href="https://www.bloomberg.com/news/articles/2025-01-13/goldman-sees-dollar-rallying-5-or-more-as-us-growth-dominates">https://www.bloomberg.com/news/articles/2025-01-13/goldman-sees-dollar-rallying-5-or-more-as-us-growth-dominates</a></p>
+
+          <p><a href="https://www.goldmansachs.com/insights/articles/how-tariffs-are-forecast-to-affect-us-stocks">https://www.goldmansachs.com/insights/articles/how-tariffs-are-forecast-to-affect-us-stocks</a></p>
+
+          <p><a href="https://tax.thomsonreuters.com/blog/what-trumps-global-tariff-announcement-means-for-trade-professionals/">https://tax.thomsonreuters.com/blog/what-trumps-global-tariff-announcement-means-for-trade-professionals/</a></p>
+
+          <p><a href="https://ir.apollo.com/sec-filings/content/0001858681-25-000034/apo-20241231.htm">https://ir.apollo.com/sec-filings/content/0001858681-25-000034/apo-20241231.htm</a></p>
+
+          <p><a href="https://www.emerald.com/insight/content/doi/10.1108/ijoem-04-2021-0498/full/html">https://www.emerald.com/insight/content/doi/10.1108/ijoem-04-2021-0498/full/html</a></p>
+        </div>
+
+        <div class="signature">
+          <p>Lionel Greene</p>
+          <p>April 4, 2025</p>
+        </div>
+
+      </div>
+    </article>
+
+    <p class="archive-link"><a href="/">Return to archive</a></p>
+  </div>
+</body>
+</html>
